@@ -5,6 +5,7 @@
  */
 package com.iotproject.javabeans;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,12 +52,12 @@ public class SensorType implements Serializable {
         this.name = name;
     }
     
-    public List<Sensor> getSensors() {
+    /*public List<Sensor> getSensors() {
         return sensors;
     }
 
     public void setSensors(List<Sensor> sensors) {
         this.sensors = sensors;
-    }
+    }*/
 
 }

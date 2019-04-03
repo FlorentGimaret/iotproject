@@ -5,6 +5,7 @@
  */
 package com.iotproject.javabeans;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Entity;
@@ -59,13 +60,13 @@ public class SensorData implements Serializable {
         this.date = date;
     }
 
-    public Sensor getSensor() {
+    /*public Sensor getSensor() {
         return sensor;
     }
 
     public void setSensor(Sensor sensor) {
         this.sensor = sensor;
-    }
+    }*/
 
 
     

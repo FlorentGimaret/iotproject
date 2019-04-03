@@ -5,6 +5,8 @@
  */
 package com.iotproject.javabeans;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +38,8 @@ public class Sensor implements Serializable {
     @OneToMany(mappedBy = "sensor", cascade = CascadeType.ALL, orphanRemoval=true)
     private List<SensorData> sensorData = new ArrayList<>();
     
-    public Sensor() {}
+    public Sensor() {
+    }
 
     public Sensor(int sensorId, String name, String macAddress, Raspberry raspberry, SensorType sensorType) {
         this.sensorId = sensorId;
@@ -70,13 +73,13 @@ public class Sensor implements Serializable {
         this.macAddress = macAddress;
     }
 
-    public Raspberry getRaspberry() {
+    /*public Raspberry getRaspberry() {
         return raspberry;
     }
 
     public void setRaspberry(Raspberry raspberry) {
         this.raspberry = raspberry;
-    }
+    }*/
 
     public SensorType getSensorType() {
         return sensorType;

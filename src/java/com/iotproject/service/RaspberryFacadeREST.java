@@ -64,7 +64,7 @@ public class RaspberryFacadeREST {
     @GET
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public List<Raspberry> findAll() {
-        Query query = em.createQuery("SELECT s FROM Raspberry s");
+        Query query = em.createQuery("SELECT r FROM Raspberry r");
         return (List<Raspberry>) query.getResultList();
     }
     
